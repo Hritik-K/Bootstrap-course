@@ -17,29 +17,155 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30" width="41"></a>
+            <a class="navbar-brand mr-auto" href=""><img src="img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span>Home</a></li>
-                    <li class="nav-item active"><a class="nav-link" href=""><span class="fa fa-info fa-lg"></span>About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
+                <span id="login" class="navbar-text">
+                    <a>
+                        <span class="fa fa-sign-in fa-lg"></span> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" name="cancel">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-8">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                <div class="col-12 col-sm-6">
+                    <h1 style="font-size:50px"><strong>Ristorante con Fusion</strong></h1>
+                    <p style="font-size:21px"><strong>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</strong></p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a id="reserveTable" role="button" class="btn btn-block btn-warning text-white">
+                        <strong>Reserve Table</strong>
+                    </a>
+                </div>
+            </div>
+
+            <div id="reserve_table" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+                    <div class="modal-content">
+                        <div class="card">
+                            <h3 class="modal-header card-header">
+                                <strong>Reserve a Table</strong>
+                                <button type="button" class="close">
+                                    &times;
+                                </button>
+                            </h3>
+                            <div class="modal-body card-body" style="color:black">
+                                <form>
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-2 col-form-label">Number of Guests</label>
+                                        <div class="col-2 col-sm-1 ml-4">
+                                            <input class="form-check-input" name="guestnum" type="radio" id="1">
+                                            <label class="form-check-label" for="1">1</label>
+                                        </div>
+                                        <div class="col-2 col-sm-1">
+                                            <input class="form-check-input" name="guestnum" type="radio" id="2">
+                                            <label class="form-check-label" for="2">2</label>
+                                        </div>
+                                        <div class="col-2 col-sm-1">
+                                            <input class="form-check-input" name="guestnum" type="radio" id="3">
+                                            <label class="form-check-label" for="3">3</label>
+                                        </div>
+                                        <div class="col-2 col-sm-1">
+                                            <input class="form-check-input" name="guestnum" type="radio" id="4">
+                                            <label class="form-check-label" for="4">4</label>
+                                        </div>
+                                        <div class="col-2 col-sm-1">
+                                            <input class="form-check-input" name="guestnum" type="radio" id="5">
+                                            <label class="form-check-label" for="5">5</label>
+                                        </div>
+                                        <div class="col-2 col-sm-1 ml-4 ml-sm-0">
+                                            <input class="form-check-input" name="guestnum" type="radio" id="6">
+                                            <label class="form-check-label" for="6">6</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-2 col-form-label">Section</label>
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-success active">
+                                                <input type="radio" name="options" id="option1" checked>Non-Smoking
+                                            </label>
+                                            <label class="btn btn-danger">
+                                                <input type="radio" name="options" id="option2"> Smoking
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-2 col-form-label">Date and Time</label>
+                                        <div class="col-12 col-sm-3">
+                                            <input class="form-control" type="text" placeholder="Date">
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <input class="form-control" type="text" placeholder="Time">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="offset-sm-2">
+                                            <button type="button" class="btn btn-secondary ml-3" name="cancel">
+                                                Cancel</button>
+                                            <button type="submit" class="btn btn-primary">
+                                                Reserve</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,6 +377,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

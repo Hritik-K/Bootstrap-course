@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-auto" href=""><img src="img/logo.png" height="30" width="41"></a>
@@ -29,21 +29,21 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                <span id="login" class="navbar-text">
+                    <a>
                         <span class="fa fa-sign-in fa-lg"></span> Login
                     </a>
                 </span>
             </div>
         </div>
     </nav>
-    
+
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close">
                         &times;
                     </button>
                 </div>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" name="cancel">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -87,7 +87,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#reserve_table" role="button" class="btn btn-block btn-warning text-white">
+                    <a id="reserveTable" role="button" class="btn btn-block btn-warning text-white">
                         <strong>Reserve Table</strong>
                     </a>
                 </div>
@@ -97,9 +97,9 @@
                 <div class="modal-dialog modal-lg" role="content">
                     <div class="modal-content">
                         <div class="card">
-                            <h3 class="modal-header card-header bg-warning">
+                            <h3 class="modal-header card-header">
                                 <strong>Reserve a Table</strong>
-                                <button type="button" class="close" data-dismiss="modal">
+                                <button type="button" class="close">
                                     &times;
                                 </button>
                             </h3>
@@ -157,7 +157,7 @@
 
                                     <div class="form-group row">
                                         <div class="offset-sm-2">
-                                            <button type="submit" class="btn btn-secondary ml-3" data-dismiss="modal">
+                                            <button type="button" class="btn btn-secondary ml-3" name="cancel">
                                                 Cancel</button>
                                             <button type="submit" class="btn btn-primary">
                                                 Reserve</button>
@@ -322,29 +322,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<!--
-    <script>$(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();
-            })</script>
--->
-    <script>
-        $('document').ready(function(){
-            $('#mycarousel').carousel({interval: 2000});
-            $('#carousel-button').click(function(){
-                if($('#carousel-button').children('span').hasClass('fa-pause')){
-                    $('#mycarousel').carousel('pause');
-                    $('#carousel-button').children('span').removeClass('fa-pause');
-                    $('#carousel-button').children('span').addClass('fa-play');
-                }
-                else{
-                    $('#mycarousel').carousel('cycle');
-                    $('#carousel-button').children('span').removeClass('fa-play');
-                    $('#carousel-button').children('span').addClass('fa-pause');
-                }
-            });
-        })
-    </script>
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
